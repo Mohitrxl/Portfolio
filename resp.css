@@ -1,0 +1,263 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(192, 72, 51);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #111;
+}
+
+/* Portfolio Layout */
+.Portfolio {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navigation */
+.navlist {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    height: 15vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.navlist li {
+    margin: 0;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.navlist li a:hover {
+    color: #ff8c00;
+}
+
+/* Left and Right Containers */
+.left-container,
+.right-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.left-container {
+    width: 70%;
+    background: hsl(0, 0%, 0%);
+}
+
+.right-container {
+    width: 30%;
+    background: linear-gradient(-45deg, #3a7a7a, hsl(0, 0%, 0%) 70%);
+    position: relative;
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.icons .fa-brands {
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+
+.icons .fa-brands:hover {
+    cursor: pointer;
+    background: linear-gradient(#fff, #3a7a7a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Content Styling */
+.content {
+    color: aliceblue;
+}
+
+.content .intro {
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content .intro span {
+    color: #3a7a7a;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #3a7a7a;
+}
+
+.content .detail {
+    color: #fff;
+    max-width: 40rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.6rem;
+}
+
+/* Buttons */
+.btn button {
+    border: 0.1rem solid #3a7a7a;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+button:nth-child(1) {
+    background: hsl(174, 88%, 29%);
+    color: #fff;
+}
+
+button:nth-child(2) {
+    background: transparent;
+    color: #3a7a7a;
+    margin-left: 2rem;
+}
+
+button:nth-child(1):hover {
+    background-color: transparent;
+    color: #3a7a7a;
+    transform: scale(1.05);
+}
+
+button:nth-child(2):hover {
+    background-color: #3a7a7a;
+    color: hsl(0, 0%, 0%);
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+/* Image Styling */
+.myimage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25%; /* Adjusted width to be smaller */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures the image covers the container */
+    opacity: 0.7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .myimage {
+        width: 30%; /* Slightly larger for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .myimage {
+        width: 40%; /* Larger on smaller screens for visibility */
+    }
+}
+
+@media (max-width: 480px) {
+    .myimage {
+        width: 50%; /* Full width on very small screens */
+        bottom: 10%; /* Adjust position to fit better */
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navlist {
+        gap: 1rem;
+        padding: 0 2%;
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .icons {
+        font-size: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .myimage {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .Portfolio {
+        flex-direction: column;
+    }
+
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .left-container {
+        padding: 1rem;
+    }
+
+    .icons {
+        font-size: 1.2rem;
+        gap: 1rem;
+    }
+
+    .myimage {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .icons {
+        font-size: 1rem;
+        gap: 0.5rem;
+    }
+
+    .btn button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .myimage {
+        width: 100%;
+    }
+}

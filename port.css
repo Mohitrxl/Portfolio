@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    color: rgb(192, 72, 51);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.Portfolio {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+    height: 15vh;
+    position: fixed;
+    margin-left: 15%;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    
+
+}
+
+.left-container,
+.right-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.left-container {
+    width: 70%;
+    background: hsl(0, 0%, 0%);
+    padding: 3rem;
+
+}
+
+.icons .fa-brands {
+    color: #fff;
+}
+
+.right-container {
+    width: 30%;
+    background: linear-gradient(-45deg,#3a7a7a,hsl(0, 0%, 0%) 70%)
+
+
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 3rem;
+}
+
+.content {
+    margin-left: 3rem;
+    color: aliceblue;
+}
+
+.content .intro {
+    font-size:xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+.content .intro span{
+    color: #3a7a7a;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #3a7a7a;
+
+}
+.content .detail{
+    color: #fff;
+    max-width: 40rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.6rem;
+
+}
+.btn button{
+    border: 0.1rem solid  #3a7a7a;
+    font-size: 1.2rem;
+    padding: 0.8rem .4rem;
+    border-radius: 0.5rem;
+    gap: 10rem;
+    
+   
+    
+}
+button:nth-child(1){
+    background: hsl(174, 88%, 29%);
+}
+button:nth-child(2){
+    background: transparent;
+    color: #3a7a7a;
+    margin-left: 2rem;
+}
+button:nth-child(1):hover{
+    background-color: transparent;
+    color: #3a7a7a;
+
+}
+button:nth-child(2):hover{
+    background-color: #3a7a7a;
+    color: hsl(0, 0%, 0%);
+
+}
+.icons .fa-brands:hover{
+ cursor: pointer;
+ background: linear-gradient(#fff, #3a7a7a);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+
+
+
+}
+.circle:nth-child(1){
+    width: 40rem;
+    background: linear-gradient(270deg,hsl(0, 0%, 0%) 40% ,hsl(0, 0%, 0%) ) 
+}
+ 
+.circle:nth-child(2){
+    width: 30rem;
+    background: hsl(0, 26%, 77%);
+    background-image: url(abcd.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    border: 0.5rem solid#fff ;
+    box-shadow: 
+    0 0 1rem #fff , 
+    inset 0 0 1rem #fff ,
+    0 0 2rem #3a7a7a ,
+    inset 0 0 2rem #3a7a7a,
+    0 0 4rem #3a7a7a ,
+    inset 0 0 4rem #3a7a7a;
+}
+
