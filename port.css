@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "poppins";
 }
 
 body {
@@ -21,12 +23,13 @@ body {
 .navlist {
     display: flex;
     list-style: none;
-    align-items: center;
-    gap: 3rem;
+    position: relative;
+    height: 4rem;
+    background-color: #000;
+    color: #fff;
     justify-content: center;
-    height: 15vh;
-    position: fixed;
-    margin-left: 15%;
+    gap: 2rem;
+    align-items: center;
 }
 
 .navlist li a {
@@ -47,7 +50,7 @@ body {
 }
 
 .left-container {
-    width: 70%;
+    width: 50%;
     background: hsl(0, 0%, 0%);
     padding: 3rem;
 
@@ -58,12 +61,21 @@ body {
 }
 
 .right-container {
-    width: 30%;
-    background: linear-gradient(-45deg,#3a7a7a,hsl(0, 0%, 0%) 70%)
-
-
+    width: 50%;
+    background: linear-gradient(-45deg,#3a7a7a,hsl(0, 0%, 0%) 70%);
+    display: flex;
+    justify-content: center !important;
 }
-
+.design{
+    position: relative;
+}
+.circle:nth-child(1){
+    position: relative;
+    display: none;
+}
+.circle:nth-child(2){
+    position: relative;
+}
 .icons {
     display: flex;
     flex-direction: column;
@@ -99,12 +111,14 @@ h1 {
     line-height: 1.6rem;
 
 }
+
 .btn button{
     border: 0.1rem solid  #3a7a7a;
     font-size: 1.2rem;
     padding: 0.8rem .4rem;
     border-radius: 0.5rem;
     gap: 10rem;
+    width: 20rem;
     
    
     
@@ -115,7 +129,10 @@ button:nth-child(1){
 button:nth-child(2){
     background: transparent;
     color: #3a7a7a;
-    margin-left: 2rem;
+}
+button:nth-child(3){
+    background: transparent;
+    color: #3a7a7a;
 }
 button:nth-child(1):hover{
     background-color: transparent;
@@ -127,21 +144,25 @@ button:nth-child(2):hover{
     color: hsl(0, 0%, 0%);
 
 }
+button:nth-child(3):hover{
+    background-color: #3a7a7a;
+    color: hsl(0, 0%, 0%);
+
+}
 .icons .fa-brands:hover{
  cursor: pointer;
  background: linear-gradient(#fff, #3a7a7a);
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
 }
+
 .design .circle{
     aspect-ratio: 1;
-    position: absolute;
+    /* position: absolute; */
     border-radius: 50%;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%,-50%);
-
-
+    /* top: 50%;
+    left: 75%; */
+    /* transform: translate(-50%,-50%); */
 
 }
 .circle:nth-child(1){
@@ -164,4 +185,48 @@ button:nth-child(2):hover{
     0 0 4rem #3a7a7a ,
     inset 0 0 4rem #3a7a7a;
 }
-
+@media(max-width:1000px){
+    .circle:nth-child(2){
+        width: 25rem;
+    }
+}
+@media(max-width:700px){
+    .right-container{
+        width: 100%;
+        height: 70vh;
+    }
+    .left-container{
+        width: 100%;
+        order: 1;
+        height: 100%;
+    }
+    .Portfolio{
+        display: flex;
+        flex-direction: column;
+    }
+    .design{
+        /* display: none; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 10rem; */
+        /* height: 10rem; */
+        /* overflow: hidden; */
+        /* background-color: red; */
+    }
+    .circle:nth-child(1){
+        display: none;
+    }
+    .circle:nth-child(2){
+        width: 24rem;
+    }
+    .navlist{
+        gap: 1.5rem;
+    }
+    .btn{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+}
