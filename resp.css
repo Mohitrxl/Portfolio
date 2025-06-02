@@ -140,21 +140,25 @@ button:nth-child(1) {
 
 button:nth-child(2) {
     background: transparent;
-    color: #3a7a7a;
+    color: #000;
     margin-left: 2rem;
 }
 
-button:nth-child(1):hover {
+/* button:nth-child(1):hover {
     background-color: transparent;
-    color: #3a7a7a;
+    color: #000;
     transform: scale(1.05);
 }
 
 button:nth-child(2):hover {
-    background-color: #3a7a7a;
+    background-color: transparent;
     color: hsl(0, 0%, 0%);
     transform: scale(1.05);
 }
+.btn button:nth-child(3):hover{
+    color: black !important;
+} */
+
 
 /* Image Styling */
 /* Image Styling */
